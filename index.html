@@ -8,7 +8,6 @@
         <title>SIMULADOR GRAVEDAD</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" /> 
         <link href="css/bootstrap.min.css" rel="stylesheet" />
-        
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -29,14 +28,13 @@
                         </center>
                     <button onclick="alturadeseada()">Guardar</button>
             </div>
-            
             <div class="row gx-4 gx-lg-5">
                 <div class="col-md-2 mb-5">  <div class="">
                         <div class="card-body">
                             <h2 class="card-title">GENERICO</h2>
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tierra"
                             onclick="ajustarDatos(0)">
-                            <img src="Imagenes/Imagen10.jpg" alt="img planeta tierra" width="200px" height="200px">
+                            <img src="Imagenes/Imagen10.jpg" alt="img planeta generico" width="200px" height="200px">
                         </div>      </div>
                 </div>
             <div class="row gx-4 gx-lg-5">
@@ -116,7 +114,6 @@
                                     <img src="Imagenes/Imagen5.jfif" alt="img planeta tierra" width="200px" height="200px">
                                     <p>Gravedad luna: 1,62 m/s²</p>
                                 </div> </div>
-
         </div>   </div>
         <div class="modal fullscreen-modal fade" id="tierra" tabindex="-1" aria-labelledby="tierra" aria-hidden="true">
             <div class="modal-dialog">
@@ -144,11 +141,9 @@
                         <button type="button" class="btn btn-warning" onclick="reiniciar()">REINICIAR</button>
                     </div>  </div>
             </div>  </div>
+            <script src="js/bootstrap.js"></script>
             <script src="js/jquery.js"></script>
            <script src="js/scripts.js"></script>
         <script src="js/functions.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-            crossorigin="anonymous"></script>
     </body>
 </html>

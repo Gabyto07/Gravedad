@@ -1,19 +1,17 @@
-contador = 0;
-bandera = false;
-altura;
-gravedad;
-velocidad;
-tiempo;
+var contador = 0;   //variables
+var bandera = false;
+var altura;
+var gravedad;
+var velocidad;
+var tiempo;
 alert("d")
 /*main();
 function main(){
 $("#ocultar").hide();
 alert("aa")
 }*/
-
+$("#ocultar").hide();
 function simulador() {
-
-
     a = setInterval(function () {
         document.querySelector("#objeto").style.marginTop = contador + "px";
         contador += velocidad;
@@ -24,7 +22,6 @@ function simulador() {
         }
     }, 500 / (tiempo * 1000))
 }
-
 function alturadeseada(){
     altura=$("#altura").val();
     document.getElementById("altura").value="";
@@ -32,20 +29,19 @@ function alturadeseada(){
 function ajustarDatos(a) {
     $("#ocultar").hide();
     switch (a) {
-        case 0:
+        case 0:      // ORGANIZO LOS DATOS NOMBRE, GRAVEDAD, ALTURA DE LO INGRESADO
             $("#ocultar").show();
             $("#guardarGenerico").on("click", function(){
                 altura=$("#alturaGenerico").val();
-                 gravedad =$("#gravedadGenerico").val();
+                gravedad =$("#gravedadGenerico").val();
                 nombre=$("#nombre").val();
                 document.getElementById("titulo").innerText = "Simulador del planeta "+nombre;
                 document.querySelector(".modal-body").style.marginBottom = "500px";
     tiempo = Math.sqrt((2 * altura) / gravedad);
     velocidad = gravedad * tiempo;
-            })
-            
+            })           
             break;
-        case 1:
+        case 1:  //para ir evaluando la gravedad y cada planeta
             gravedad =9.807
             document.getElementById("titulo").innerText = "Simulador del planeta Tierra"
             break;
@@ -85,7 +81,7 @@ function ajustarDatos(a) {
     }
     document.querySelector(".modal-body").style.marginBottom = "500px";
     tiempo = Math.sqrt((2 * altura) / gravedad);
-    velocidad = gravedad * tiempo;   
+    velocidad = gravedad * tiempo;     // FORMULA DE LA GRAVEDAD 
     if (bandera) {
         document.querySelector(".modal-body").style.marginBottom = "0px";
     }
